@@ -1,21 +1,21 @@
 import React from 'react';
-import { MapPin, Clock, Calendar, Phone, MessageSquare, ExternalLink, Scale, Landmark, Compass, CheckCircle } from 'lucide-react';
+import { MapPin, Clock, Calendar, Phone, MessageSquare, ExternalLink, Compass } from 'lucide-react';
 import { lawyerData } from '../data/lawyerData';
 
 export default function Chambers({ onOpenAppointment }) {
   return (
-    <div className="space-y-16 pb-16">
-      {/* HEADER BANNER */}
-      <section className="relative py-16 bg-[#0a1224] border-b border-gold-500/20 court-pattern">
+    <div className="space-y-16 pb-16 bg-white text-neutral-900">
+      {/* HEADER BANNER - Light Theme */}
+      <section className="relative py-16 bg-neutral-50 border-b border-neutral-200 court-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl space-y-3">
-            <div className="text-xs font-semibold uppercase tracking-widest text-gold-400 font-cinzel">
+            <div className="text-xs font-semibold uppercase tracking-widest text-neutral-600 font-cinzel">
               Consultation Venues & Offices
             </div>
-            <h1 className="text-3xl sm:text-5xl font-serif font-bold text-white">
+            <h1 className="text-3xl sm:text-5xl font-serif font-bold text-black">
               Chambers & Legal Offices
             </h1>
-            <p className="text-sm sm:text-base text-slate-300 font-serif italic">
+            <p className="text-sm sm:text-base text-neutral-600 font-serif italic">
               Three strategically located chambers for legal consultation across Kolkata and South 24-Parganas.
             </p>
           </div>
@@ -35,55 +35,55 @@ export default function Chambers({ onOpenAppointment }) {
           return (
             <div
               key={chamber.id}
-              className="bg-dark-card rounded-3xl p-6 sm:p-10 border border-gold-500/30 shadow-2xl relative overflow-hidden"
+              className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200 shadow-md relative overflow-hidden"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
                 {/* Left: Chamber Details */}
                 <div className="lg:col-span-7 space-y-5">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-gold-500/15 text-gold-300 border border-gold-500/30 font-cinzel">
+                    <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-neutral-100 text-black border border-neutral-300 font-cinzel">
                       Chamber {index + 1} • {chamber.badge}
                     </span>
-                    <span className="text-xs text-slate-400 font-medium">
+                    <span className="text-xs text-neutral-500 font-medium">
                       {chamber.subtitle}
                     </span>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white">
+                  <h2 className="text-2xl sm:text-3xl font-serif font-bold text-black">
                     {chamber.name}
                   </h2>
 
-                  <div className="space-y-3 text-xs sm:text-sm text-slate-300">
-                    <div className="flex items-start gap-3 p-3 rounded-xl bg-navy-900/60 border border-slate-800">
-                      <MapPin className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+                  <div className="space-y-3 text-xs sm:text-sm text-neutral-700">
+                    <div className="flex items-start gap-3 p-3.5 rounded-xl bg-neutral-50 border border-neutral-200">
+                      <MapPin className="w-5 h-5 text-black shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-white block font-sans">Full Address:</strong>
+                        <strong className="text-black block font-sans">Full Address:</strong>
                         <span>{chamber.address}</span>
-                        <div className="text-gold-300/90 font-medium mt-0.5">{chamber.city}</div>
+                        <div className="text-neutral-900 font-semibold mt-0.5">{chamber.city}</div>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3 p-3 rounded-xl bg-navy-900/60 border border-slate-800">
-                      <Compass className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-3 p-3.5 rounded-xl bg-neutral-50 border border-neutral-200">
+                      <Compass className="w-5 h-5 text-black shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-white block font-sans">Prominent Landmark:</strong>
+                        <strong className="text-black block font-sans">Prominent Landmark:</strong>
                         <span>{chamber.landmark}</span>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3 p-3 rounded-xl bg-navy-900/60 border border-slate-800">
-                      <Clock className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-3 p-3.5 rounded-xl bg-neutral-50 border border-neutral-200">
+                      <Clock className="w-5 h-5 text-black shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-white block font-sans">Consultation Hours:</strong>
+                        <strong className="text-black block font-sans">Consultation Hours:</strong>
                         <span>{chamber.timings}</span>
-                        <div className="text-slate-400 text-xs mt-0.5">Availability: {chamber.days}</div>
+                        <div className="text-neutral-500 text-xs mt-0.5">Availability: {chamber.days}</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Chamber specific advisory note */}
-                  <div className="text-xs text-slate-400 bg-navy-950/40 p-3 rounded-lg border border-slate-800">
+                  <div className="text-xs text-neutral-600 bg-neutral-50 p-3.5 rounded-xl border border-neutral-200">
                     {chamber.id === 'highcourt' && (
                       <p>
                         💡 <strong>High Court Note:</strong> Bar Association Room No. 15 is accessible during High Court sitting hours (10:30 AM to 4:30 PM). Suitable for discussing High Court filings, Second Appeals, Writ matters, and Urgent Interim mentions. Prior phone confirmation is recommended.
@@ -103,37 +103,37 @@ export default function Chambers({ onOpenAppointment }) {
                 </div>
 
                 {/* Right: Actions, Map link & Booking */}
-                <div className="lg:col-span-5 bg-navy-900/80 rounded-2xl p-6 border border-slate-700/80 space-y-5">
-                  <div className="border-b border-slate-800 pb-3">
-                    <h3 className="font-serif font-bold text-lg text-white">
+                <div className="lg:col-span-5 bg-neutral-50 rounded-2xl p-6 border border-neutral-200 space-y-5">
+                  <div className="border-b border-neutral-200 pb-3">
+                    <h3 className="font-serif font-bold text-lg text-black">
                       Connect with this Chamber
                     </h3>
-                    <p className="text-xs text-slate-400">
+                    <p className="text-xs text-neutral-500">
                       Advocate Jagadish Chandra Halder
                     </p>
                   </div>
 
                   <div className="space-y-2 text-xs">
-                    <div className="flex items-center justify-between py-1.5 border-b border-slate-800">
-                      <span className="text-slate-400">Helpline Phone:</span>
-                      <a href={`tel:+91${chamber.phone}`} className="text-gold-300 font-bold hover:underline">
+                    <div className="flex items-center justify-between py-1.5 border-b border-neutral-200">
+                      <span className="text-neutral-500">Helpline Phone:</span>
+                      <a href={`tel:+91${chamber.phone}`} className="text-black font-bold hover:underline">
                         +91 {chamber.phone}
                       </a>
                     </div>
-                    <div className="flex items-center justify-between py-1.5 border-b border-slate-800">
-                      <span className="text-slate-400">Consultation Type:</span>
-                      <span className="text-slate-200 font-medium">In-Person & Chamber Review</span>
+                    <div className="flex items-center justify-between py-1.5 border-b border-neutral-200">
+                      <span className="text-neutral-500">Consultation Type:</span>
+                      <span className="text-neutral-900 font-medium">In-Person & Chamber Review</span>
                     </div>
                     <div className="flex items-center justify-between py-1.5">
-                      <span className="text-slate-400">Prior Notice:</span>
-                      <span className="text-emerald-400 font-semibold">Appointment Advised</span>
+                      <span className="text-neutral-500">Prior Notice:</span>
+                      <span className="text-neutral-900 font-semibold">Appointment Advised</span>
                     </div>
                   </div>
 
                   <div className="space-y-2.5 pt-2">
                     <button
                       onClick={() => onOpenAppointment(chamber.id)}
-                      className="w-full py-3 rounded-xl bg-gold-gradient text-navy-950 font-bold text-xs sm:text-sm shadow-md hover:opacity-95 transition-all text-center flex items-center justify-center gap-2"
+                      className="w-full py-3 rounded-xl bg-black text-white font-bold text-xs sm:text-sm shadow hover:bg-neutral-800 transition-all text-center flex items-center justify-center gap-2"
                     >
                       <Calendar className="w-4 h-4" />
                       <span>Book at {chamber.name.split('(')[0]}</span>
@@ -144,7 +144,7 @@ export default function Chambers({ onOpenAppointment }) {
                         href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-all text-center"
+                        className="py-2.5 px-3 rounded-xl bg-neutral-900 hover:bg-black text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-all text-center"
                       >
                         <MessageSquare className="w-3.5 h-3.5" />
                         <span>WhatsApp</span>
@@ -154,7 +154,7 @@ export default function Chambers({ onOpenAppointment }) {
                         href={mapUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="py-2.5 px-3 rounded-xl bg-navy-800 hover:bg-navy-700 text-gold-300 border border-gold-500/30 font-semibold text-xs flex items-center justify-center gap-1.5 transition-all text-center"
+                        className="py-2.5 px-3 rounded-xl bg-white hover:bg-neutral-100 text-black border border-neutral-300 font-semibold text-xs flex items-center justify-center gap-1.5 transition-all text-center"
                       >
                         <ExternalLink className="w-3.5 h-3.5" />
                         <span>Google Map</span>
@@ -171,8 +171,8 @@ export default function Chambers({ onOpenAppointment }) {
 
       {/* SUMMARY NOTE */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
-        <div className="p-6 rounded-2xl bg-navy-900 border border-slate-800 text-xs sm:text-sm text-slate-300 space-y-2">
-          <div className="font-serif font-bold text-base text-gold-300">
+        <div className="p-6 rounded-2xl bg-neutral-50 border border-neutral-200 text-xs sm:text-sm text-neutral-700 space-y-2 shadow-sm">
+          <div className="font-serif font-bold text-base text-black">
             Need Guidance on Which Chamber to Visit?
           </div>
           <p>

@@ -62,7 +62,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#080E1B] text-slate-100 selection:bg-gold-500 selection:text-navy-950 font-sans">
+    <div className="min-h-screen flex flex-col bg-white text-neutral-900 selection:bg-black selection:text-white font-sans">
       {/* BCI Statutory Compliance Disclaimer Modal */}
       <DisclaimerModal
         forceOpen={forceDisclaimerOpen}
