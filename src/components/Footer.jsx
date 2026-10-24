@@ -11,15 +11,15 @@ export default function Footer({ setActivePage, onOpenDisclaimer, onOpenAppointm
   };
 
   return (
-    <footer className="bg-neutral-100 border-t-2 border-neutral-300 text-neutral-800 pt-16 pb-12 mt-auto font-sans">
+    <footer className="bg-neutral-100 border-t border-neutral-200 text-neutral-800 pt-12 pb-10 mt-auto font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Top Grid: Chambers & Profile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b-2 border-neutral-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-neutral-200">
           
           {/* Column 1: Identity & Crest */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <div className="flex items-center gap-3">
-              <div className="w-14 h-14 rounded-full border-2 border-black p-0.5 bg-white overflow-hidden shrink-0 shadow-sm">
+              <div className="w-11 h-11 rounded-full border border-neutral-300 p-0.5 bg-white overflow-hidden shrink-0 shadow-xs">
                 <img
                   src="./logo.png"
                   alt="Advocate Jagadish Chandra Halder"
@@ -28,62 +28,62 @@ export default function Footer({ setActivePage, onOpenDisclaimer, onOpenAppointm
                 />
               </div>
               <div>
-                <h4 className="font-serif font-black text-xl text-black">
+                <h4 className="font-cinzel font-bold text-sm sm:text-base text-black">
                   JAGADISH CHANDRA HALDER
                 </h4>
-                <div className="text-xs font-bold uppercase tracking-wider text-neutral-700 font-cinzel">
+                <div className="text-[10px] font-semibold uppercase tracking-wider text-neutral-600 font-cinzel">
                   Advocate, High Court, Calcutta
                 </div>
               </div>
             </div>
 
-            <p className="text-sm sm:text-base text-neutral-700 leading-relaxed font-normal">
+            <p className="text-xs text-neutral-600 leading-relaxed font-normal">
               Distinguished civil advocate with over 25 years of courtroom experience in the High Court at Calcutta, Sub-Divisional Courts, and District Courts of West Bengal. Specializing in property disputes, title suits, appeals, and constitutional writs.
             </p>
 
-            <div className="pt-2">
+            <div className="pt-1">
               <button
                 onClick={() => downloadVCard(lawyerData)}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border-2 border-neutral-300 text-black hover:bg-black hover:text-white transition-all text-sm font-bold shadow-sm"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-neutral-300 text-black hover:bg-black hover:text-white transition-all text-xs font-medium shadow-xs"
               >
-                <Download className="w-4 h-4" />
-                <span>Save Advocate Contact (vCard)</span>
+                <Download className="w-3.5 h-3.5" />
+                <span>Save Contact (vCard)</span>
               </button>
             </div>
           </div>
 
           {/* Column 2: The 3 Chambers */}
-          <div className="space-y-4">
-            <h5 className="font-cinzel text-xs sm:text-sm font-extrabold uppercase tracking-wider text-black border-b-2 border-neutral-300 pb-2">
+          <div className="space-y-3">
+            <h5 className="font-cinzel text-xs font-semibold uppercase tracking-wider text-black border-b border-neutral-200 pb-1.5">
               Chambers & Offices
             </h5>
-            <ul className="space-y-4 text-sm sm:text-base">
-              <li className="space-y-1">
-                <div className="font-bold text-black flex items-center gap-2">
-                  <Scale className="w-4 h-4 text-black shrink-0" />
+            <ul className="space-y-3 text-xs">
+              <li className="space-y-0.5">
+                <div className="font-semibold text-black flex items-center gap-1.5">
+                  <Scale className="w-3.5 h-3.5 text-black shrink-0" />
                   Calcutta High Court Chamber
                 </div>
-                <div className="text-neutral-700 pl-6 text-xs sm:text-sm">
+                <div className="text-neutral-600 pl-5 text-[11px]">
                   Bar Association, Room No. 15 (2nd Floor), High Court, Calcutta
                 </div>
               </li>
 
-              <li className="space-y-1">
-                <div className="font-bold text-black flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-black shrink-0" />
+              <li className="space-y-0.5">
+                <div className="font-semibold text-black flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-black shrink-0" />
                   Garia Chamber (Kolkata)
                 </div>
-                <div className="text-neutral-700 pl-6 text-xs sm:text-sm">
+                <div className="text-neutral-600 pl-5 text-[11px]">
                   Garia, Nabagram, Jhil Road, Kolkata - 700152
                 </div>
               </li>
 
-              <li className="space-y-1">
-                <div className="font-bold text-black flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-black shrink-0" />
+              <li className="space-y-0.5">
+                <div className="font-semibold text-black flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-black shrink-0" />
                   Kakdwip Chamber (South 24-Parganas)
                 </div>
-                <div className="text-neutral-700 pl-6 text-xs sm:text-sm">
+                <div className="text-neutral-600 pl-5 text-[11px]">
                   Kakdwip New Market (Near Kakdwip Court), South 24-Parganas
                 </div>
               </li>
@@ -91,89 +91,89 @@ export default function Footer({ setActivePage, onOpenDisclaimer, onOpenAppointm
           </div>
 
           {/* Column 3: Quick Navigation */}
-          <div className="space-y-4">
-            <h5 className="font-cinzel text-xs sm:text-sm font-extrabold uppercase tracking-wider text-black border-b-2 border-neutral-300 pb-2">
+          <div className="space-y-3">
+            <h5 className="font-cinzel text-xs font-semibold uppercase tracking-wider text-black border-b border-neutral-200 pb-1.5">
               Explore & Services
             </h5>
-            <ul className="space-y-2.5 text-sm sm:text-base font-semibold">
+            <ul className="space-y-2 text-xs font-medium">
               <li>
                 <button
                   onClick={() => handleNav('home')}
-                  className="hover:text-black transition-colors flex items-center gap-2 text-neutral-700 hover:underline"
+                  className="hover:text-black transition-colors flex items-center gap-1.5 text-neutral-600 hover:underline"
                 >
-                  <ChevronRight className="w-4 h-4 text-black" /> Home Page
+                  <ChevronRight className="w-3.5 h-3.5 text-neutral-400" /> Home Page
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => handleNav('about')}
-                  className="hover:text-black transition-colors flex items-center gap-2 text-neutral-700 hover:underline"
+                  className="hover:text-black transition-colors flex items-center gap-1.5 text-neutral-600 hover:underline"
                 >
-                  <ChevronRight className="w-4 h-4 text-black" /> About Adv. Jagadish Halder
+                  <ChevronRight className="w-3.5 h-3.5 text-neutral-400" /> About Adv. Jagadish Halder
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => handleNav('practice-areas')}
-                  className="hover:text-black transition-colors flex items-center gap-2 text-neutral-700 hover:underline"
+                  className="hover:text-black transition-colors flex items-center gap-1.5 text-neutral-600 hover:underline"
                 >
-                  <ChevronRight className="w-4 h-4 text-black" /> Civil Practice Areas
+                  <ChevronRight className="w-3.5 h-3.5 text-neutral-400" /> Civil Practice Areas
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => handleNav('chambers')}
-                  className="hover:text-black transition-colors flex items-center gap-2 text-neutral-700 hover:underline"
+                  className="hover:text-black transition-colors flex items-center gap-1.5 text-neutral-600 hover:underline"
                 >
-                  <ChevronRight className="w-4 h-4 text-black" /> Chamber Timings & Directions
+                  <ChevronRight className="w-3.5 h-3.5 text-neutral-400" /> Chamber Timings & Directions
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => handleNav('contact')}
-                  className="hover:text-black transition-colors flex items-center gap-2 text-neutral-700 hover:underline"
+                  className="hover:text-black transition-colors flex items-center gap-1.5 text-neutral-600 hover:underline"
                 >
-                  <ChevronRight className="w-4 h-4 text-black" /> Contact & Appointments
+                  <ChevronRight className="w-3.5 h-3.5 text-neutral-400" /> Contact & Appointments
                 </button>
               </li>
             </ul>
           </div>
 
           {/* Column 4: Direct Helpline & Hours */}
-          <div className="space-y-4">
-            <h5 className="font-cinzel text-xs sm:text-sm font-extrabold uppercase tracking-wider text-black border-b-2 border-neutral-300 pb-2">
+          <div className="space-y-3">
+            <h5 className="font-cinzel text-xs font-semibold uppercase tracking-wider text-black border-b border-neutral-200 pb-1.5">
               Direct Contact
             </h5>
-            <div className="space-y-3 text-sm">
+            <div className="space-y-2 text-xs">
               <a
                 href={`tel:+91${lawyerData.phone}`}
-                className="flex items-center gap-3 p-3 rounded-xl bg-white border-2 border-neutral-300 hover:border-black transition-colors group shadow-sm"
+                className="flex items-center gap-2.5 p-2.5 rounded-lg bg-white border border-neutral-200 hover:border-black transition-colors group shadow-xs"
               >
-                <div className="w-10 h-10 rounded-xl bg-neutral-100 flex items-center justify-center text-black group-hover:bg-black group-hover:text-white transition-colors">
-                  <Phone className="w-5 h-5" />
+                <div className="w-8 h-8 rounded-md bg-neutral-100 flex items-center justify-center text-black group-hover:bg-black group-hover:text-white transition-colors">
+                  <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs text-neutral-500 font-bold uppercase">Direct Phone</div>
-                  <div className="text-black font-extrabold text-base">{lawyerData.phoneFormatted}</div>
+                  <div className="text-[10px] text-neutral-500 font-medium uppercase">Direct Phone</div>
+                  <div className="text-black font-semibold text-xs sm:text-sm">{lawyerData.phoneFormatted}</div>
                 </div>
               </a>
 
               <a
                 href={`mailto:${lawyerData.email}`}
-                className="flex items-center gap-3 p-3 rounded-xl bg-white border-2 border-neutral-300 hover:border-black transition-colors group shadow-sm"
+                className="flex items-center gap-2.5 p-2.5 rounded-lg bg-white border border-neutral-200 hover:border-black transition-colors group shadow-xs"
               >
-                <div className="w-10 h-10 rounded-xl bg-neutral-100 flex items-center justify-center text-black group-hover:bg-black group-hover:text-white transition-colors">
-                  <Mail className="w-5 h-5" />
+                <div className="w-8 h-8 rounded-md bg-neutral-100 flex items-center justify-center text-black group-hover:bg-black group-hover:text-white transition-colors">
+                  <Mail className="w-4 h-4" />
                 </div>
                 <div className="truncate">
-                  <div className="text-xs text-neutral-500 font-bold uppercase">Official Email</div>
-                  <div className="text-black font-bold text-sm truncate">{lawyerData.email}</div>
+                  <div className="text-[10px] text-neutral-500 font-medium uppercase">Official Email</div>
+                  <div className="text-black font-medium text-xs truncate">{lawyerData.email}</div>
                 </div>
               </a>
 
               <button
                 onClick={onOpenAppointment}
-                className="w-full py-3.5 rounded-xl bg-black text-white font-extrabold text-sm tracking-wide shadow-md hover:bg-neutral-800 transition-all text-center active:scale-95"
+                className="w-full py-2.5 rounded-lg bg-black text-white font-medium text-xs tracking-wide shadow-xs hover:bg-neutral-800 transition-all text-center active:scale-95"
               >
                 Request Chamber Appointment
               </button>
@@ -182,30 +182,30 @@ export default function Footer({ setActivePage, onOpenDisclaimer, onOpenAppointm
         </div>
 
         {/* Bar Council Disclaimer Notice in Footer */}
-        <div className="mt-8 p-5 rounded-2xl bg-white border-2 border-neutral-300 text-xs sm:text-sm text-neutral-700 leading-relaxed flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
-          <div className="flex items-start gap-2.5">
-            <ShieldCheck className="w-5 h-5 text-black mt-0.5 shrink-0" />
+        <div className="mt-6 p-4 rounded-xl bg-white border border-neutral-200 text-xs text-neutral-600 leading-relaxed flex flex-col md:flex-row items-center justify-between gap-3 shadow-xs">
+          <div className="flex items-start gap-2">
+            <ShieldCheck className="w-4 h-4 text-black mt-0.5 shrink-0" />
             <span>
               <strong>Bar Council of India Rule 36 Compliance:</strong> This website does not constitute advertising or solicitation. The information provided is solely for informational purposes upon user request.
             </span>
           </div>
           <button
             onClick={onOpenDisclaimer}
-            className="text-black font-extrabold hover:underline shrink-0 text-sm"
+            className="text-black font-semibold hover:underline shrink-0 text-xs"
           >
             View BCI Disclaimer
           </button>
         </div>
 
         {/* Bottom copyright & attribution */}
-        <div className="mt-8 pt-6 border-t border-neutral-300 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-neutral-600 font-medium">
+        <div className="mt-6 pt-4 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-neutral-500 font-normal">
           <div>
             &copy; {new Date().getFullYear()} Advocate Jagadish Chandra Halder. All Rights Reserved.
           </div>
-          <div className="flex items-center gap-4">
-            <span className="font-mono text-sm text-black font-extrabold">advjagadish.in</span>
+          <div className="flex items-center gap-3">
+            <span className="font-mono text-black font-semibold">advjagadish.in</span>
             <span>•</span>
-            <span className="font-bold">High Court, Calcutta</span>
+            <span className="font-medium">High Court, Calcutta</span>
           </div>
         </div>
       </div>
