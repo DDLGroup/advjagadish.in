@@ -1,4 +1,53 @@
+# Robots.txt for Advocate Jagadish Chandra Halder (https://advjagadish.in)
+# Official Legal Practice - High Court, Calcutta
+
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
 
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# AI Crawlers & LLM Indexers (Allow indexing for search & citations)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Crawl Delay to prevent server overload
+Crawl-delay: 1
+
+# Sitemaps and AI context
 Sitemap: https://advjagadish.in/sitemap.xml
+# LLM Knowledge File: https://advjagadish.in/llms.txt
