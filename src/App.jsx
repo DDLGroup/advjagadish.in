@@ -34,6 +34,33 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  // Dynamic On-Page SEO: Title & Meta Description Per Page
+  useEffect(() => {
+    const titles = {
+      'home': 'Advocate Jagadish Chandra Halder | Civil Advocate, High Court, Calcutta',
+      'about': 'About Advocate Jagadish Chandra Halder | High Court Bar Room 15, Calcutta',
+      'practice-areas': 'Civil Practice Areas | High Court Appeals, Title Suits & Writs | Adv. Jagadish Halder',
+      'chambers': 'Chambers & Offices | High Court Bar Room 15, Garia & Kakdwip | Adv. Jagadish Halder',
+      'contact': 'Contact & Appointments | Advocate Jagadish Chandra Halder | +91 9830243096'
+    };
+
+    const descriptions = {
+      'home': 'Official website of Advocate Jagadish Chandra Halder, Advocate at High Court, Calcutta (Bar Association Room No. 15, 2nd Floor). Over 25 years specializing in Land & Property Disputes, Title Suits, Partition, First & Second Appeals (Section 100 CPC), Civil Revisions & Writ Petitions in Kolkata and South 24-Parganas.',
+      'about': 'Professional profile of Advocate Jagadish Chandra Halder, seasoned civil counsel with over 25 years at the Calcutta High Court and District Courts of West Bengal.',
+      'practice-areas': 'Comprehensive civil litigation competencies: Land & Property Disputes, Title Suits, Section 100 CPC Second Appeals, Article 226 Writs, Partition Suits, and Injunctions.',
+      'chambers': 'Three accessible legal chambers: High Court Bar Association Room 15, Garia Chamber (Kolkata), and Kakdwip Chamber (South 24-Parganas). Full addresses & timings.',
+      'contact': 'Request a case review or consultation appointment with Advocate Jagadish Chandra Halder. Direct helpline: +91 9830243096, email: jagadish123halder@gmail.com.'
+    };
+
+    if (titles[activePage]) {
+      document.title = titles[activePage];
+    }
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && descriptions[activePage]) {
+      metaDesc.setAttribute('content', descriptions[activePage]);
+    }
+  }, [activePage]);
+
   const handleOpenAppointment = (chamberId = null) => {
     setPreselectedChamber(chamberId || null);
     setIsAppointmentOpen(true);
